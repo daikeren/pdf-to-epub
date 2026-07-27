@@ -1,0 +1,64 @@
+html {
+  color: #111;
+  background: #fff;
+  font-family: serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 5%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  page-break-after: avoid;
+}
+
+p,
+li {
+  orphans: 2;
+  widows: 2;
+}
+
+figure {
+  margin: 1.2em 0;
+  page-break-inside: avoid;
+  text-align: center;
+}
+
+img,
+svg {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+figcaption,
+caption {
+  font-size: 0.85em;
+  font-style: italic;
+  line-height: 1.3;
+  margin-top: 0.4em;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 0.72em;
+  line-height: 1.2;
+  margin: 1em 0;
+  max-width: 100%;
+  table-layout: auto;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #777;
+  padding: 0.25em;
+  vertical-align: top;
+  word-break: break-word;
+}

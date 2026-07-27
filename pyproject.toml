@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pdf-to-epub"
+version = "0.1.0"
+description = "Convert text-layer PDFs into reader-optimized, reflowable EPUB 3 books."
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+  "beautifulsoup4>=4.13,<5",
+  "docling==2.115.0",
+  "pillow>=11.1,<13",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<9"]
+
+[project.scripts]
+pdf-to-epub = "pdf_to_epub.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pdf_to_epub"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

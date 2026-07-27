@@ -1,0 +1,12 @@
+.DS_Store
+.pytest_cache/
+.venv/
+__pycache__/
+*.pyc
+dist/
+
+# Local source books and generated reader files
+*.[Pp][Dd][Ff]
+*.[Ee][Pp][Uu][Bb]
+*.partial
+pdf-to-epub-run-*/
