@@ -8,8 +8,20 @@ version = "0.1.0"
 description = "Convert text-layer PDFs into reader-optimized, reflowable EPUB 3 books."
 readme = "README.md"
 requires-python = ">=3.11,<3.14"
+authors = [{ name = "Andy Dai" }]
 license = "MIT"
 license-files = ["LICENSE"]
+keywords = ["pdf", "epub", "ebook", "reflow", "docling"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Text Processing :: Markup",
+  "Topic :: Utilities",
+]
 dependencies = [
   "beautifulsoup4>=4.13,<5",
   "docling==2.115.0",
@@ -21,6 +33,11 @@ dev = ["pytest>=8.3,<9"]
 
 [project.scripts]
 pdf-to-epub = "pdf_to_epub.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/daikeren/pdf-to-epub"
+Repository = "https://github.com/daikeren/pdf-to-epub"
+Issues = "https://github.com/daikeren/pdf-to-epub/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/pdf_to_epub"]

@@ -27,18 +27,16 @@ Install the system dependencies on macOS:
 brew install uv pandoc
 ```
 
-Run the latest version directly from GitHub:
+Run the published package from PyPI:
 
 ```bash
-uvx --from git+https://github.com/daikeren/pdf-to-epub.git \
-  pdf-to-epub input.pdf -o output.epub
+uvx pdf-to-epub input.pdf -o output.epub
 ```
 
 For Apple Silicon, explicitly select MPS:
 
 ```bash
-uvx --from git+https://github.com/daikeren/pdf-to-epub.git \
-  pdf-to-epub input.pdf \
+uvx pdf-to-epub input.pdf \
   -o output.epub \
   --device mps
 ```
@@ -74,8 +72,7 @@ Formal EPUB validation is optional but recommended. Download EPUBCheck from the
 jar path:
 
 ```bash
-uvx --from git+https://github.com/daikeren/pdf-to-epub.git \
-  pdf-to-epub input.pdf \
+uvx pdf-to-epub input.pdf \
   -o output.epub \
   --epubcheck-jar /path/to/epubcheck.jar
 ```

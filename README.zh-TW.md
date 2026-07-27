@@ -20,19 +20,17 @@ macOS 先安裝 system dependencies：
 brew install uv pandoc
 ```
 
-直接從 GitHub 執行最新版：
+直接從 PyPI 執行正式版本：
 
 ```bash
-uvx --from git+https://github.com/daikeren/pdf-to-epub.git \
-  pdf-to-epub input.pdf -o output.epub \
+uvx pdf-to-epub input.pdf -o output.epub \
   --language zh-TW
 ```
 
 Apple Silicon 可以直接指定 MPS：
 
 ```bash
-uvx --from git+https://github.com/daikeren/pdf-to-epub.git \
-  pdf-to-epub input.pdf \
+uvx pdf-to-epub input.pdf \
   -o output.epub \
   --language zh-TW \
   --device mps
@@ -64,8 +62,7 @@ uvx --from . pdf-to-epub input.pdf -o output.epub --language zh-TW
 EPUBCheck 不是必要 dependency，但建議正式產出時使用。從 [W3C 官方 release](https://github.com/w3c/epubcheck/releases)下載後，傳入 jar 路徑：
 
 ```bash
-uvx --from git+https://github.com/daikeren/pdf-to-epub.git \
-  pdf-to-epub input.pdf \
+uvx pdf-to-epub input.pdf \
   -o output.epub \
   --language zh-TW \
   --epubcheck-jar /path/to/epubcheck.jar
